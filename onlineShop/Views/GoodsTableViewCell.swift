@@ -26,4 +26,10 @@ class GoodsTableViewCell: UITableViewCell {
     @IBAction func addButtonPressed() {
         closure?()
     }
+    
+    func setupCell(good: PositionForSaleModel) {
+        goodImage.image = UIImage(named: good.image)
+        goodName.text = good.name
+        goodPrice.text = "\(good.price) UAH"
+    }
 }

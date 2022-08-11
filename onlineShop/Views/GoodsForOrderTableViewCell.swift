@@ -22,4 +22,9 @@ class GoodsForOrderTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setupCell(selectedGood: PositionForSaleModel) {
+        goodName.text = selectedGood.name
+        goodImage.image = UIImage(named: selectedGood.image)
+        goodPrice.text = "\(selectedGood.price) UAH"
+    }
 }

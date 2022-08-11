@@ -55,12 +55,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8950461028A2542000570B37 /* Service */ = {
+		8950461028A2542000570B37 /* Data Services */ = {
 			isa = PBXGroup;
 			children = (
 				89314ACD289FEA880057AC19 /* DataStorage.swift */,
 			);
-			path = Service;
+			path = "Data Services";
 			sourceTree = "<group>";
 		};
 		8950461128A25A2700570B37 /* Extensions */ = {
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8950461128A25A2700570B37 /* Extensions */,
-				8950461028A2542000570B37 /* Service */,
+				8950461028A2542000570B37 /* Data Services */,
 				8964D107289BC45000D7B7C0 /* Application */,
 				8964D108289BC48100D7B7C0 /* Models */,
 				8964D104289BC42E00D7B7C0 /* View Controllers */,

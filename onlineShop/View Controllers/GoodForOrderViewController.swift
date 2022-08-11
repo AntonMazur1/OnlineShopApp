@@ -75,9 +75,7 @@ extension GoodForOrderViewController: UITableViewDelegate, UITableViewDataSource
         
         let selectedGood = goodsForOrderList[indexPath.row]
         totalCheckOfOrder += Int(selectedGood.price) ?? 0
-        cell.goodImage.image = UIImage(named: selectedGood.image)
-        cell.goodPrice.text = "\(selectedGood.price) UAH"
-        cell.goodName.text = selectedGood.name
+        cell.setupCell(selectedGood: selectedGood)
         
         return cell
     }

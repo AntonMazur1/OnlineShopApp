@@ -37,9 +37,8 @@ extension GoodsTableViewController {
         else { return UITableViewCell() }
         
         let good = goods[indexPath.row]
-        cell.goodImage.image = UIImage(named: good.image)
-        cell.goodName.text = good.name
-        cell.goodPrice.text = "\(good.price) UAH"
+        
+        cell.setupCell(good: good)
         cell.closure = { [unowned self] in
             guard let tabBar = navigationController?.topViewController as? UITabBarController else { return }
             guard let goodForOrderVC = tabBar.viewControllers?[1] as? GoodForOrderViewController else { return }
