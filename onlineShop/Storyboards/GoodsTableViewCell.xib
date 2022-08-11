@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="KGk-i7-Jjw" customClass="GoodsTableViewCell" customModule="onlineShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="99"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-22-Ujz">
+                        <rect key="frame" x="20" y="10" width="83" height="79"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="83" id="023-gC-4co"/>
+                            <constraint firstAttribute="height" constant="79" id="Xaa-1S-zxI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of good" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poX-nH-253">
+                        <rect key="frame" x="111" y="40" width="108" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXw-XU-bE6">
+                        <rect key="frame" x="278" y="10" width="41" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-bK-Mc5">
+                        <rect key="frame" x="255.5" y="39" width="88.5" height="31"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Добавить" titleAlignment="automatic">
+                            <backgroundConfiguration key="background">
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            </backgroundConfiguration>
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="addButtonPressed" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6dB-oV-sty"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZXw-XU-bE6" secondAttribute="trailing" constant="34" id="ELO-pP-CjP"/>
+                    <constraint firstAttribute="trailing" secondItem="EOU-bK-Mc5" secondAttribute="trailing" constant="9" id="Jcc-xN-7Eh"/>
+                    <constraint firstItem="Wrx-22-Ujz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="L6O-wy-g5M"/>
+                    <constraint firstAttribute="bottom" secondItem="Wrx-22-Ujz" secondAttribute="bottom" constant="10" id="PsZ-pg-6a0"/>
+                    <constraint firstItem="Wrx-22-Ujz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="QVu-qr-Njh"/>
+                    <constraint firstItem="ZXw-XU-bE6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dfz-vd-OpM"/>
+                    <constraint firstItem="poX-nH-253" firstAttribute="leading" secondItem="Wrx-22-Ujz" secondAttribute="trailing" constant="8" symbolic="YES" id="f4V-Y5-bf8"/>
+                    <constraint firstAttribute="bottom" secondItem="EOU-bK-Mc5" secondAttribute="bottom" constant="29" id="fO0-c0-3sB"/>
+                    <constraint firstItem="poX-nH-253" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="pOL-7m-AL8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addButton" destination="EOU-bK-Mc5" id="0PS-rP-Y5B"/>
+                <outlet property="goodImage" destination="Wrx-22-Ujz" id="mfD-l2-in6"/>
+                <outlet property="goodName" destination="poX-nH-253" id="fjg-5f-8Pw"/>
+                <outlet property="goodPrice" destination="ZXw-XU-bE6" id="ucG-0q-Hy3"/>
+            </connections>
+            <point key="canvasLocation" x="155.79710144927537" y="104.12946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
